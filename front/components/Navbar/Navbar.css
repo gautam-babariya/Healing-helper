@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.header_class{
+  background-color: #6675fa  !important;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+  backdrop-filter: blur(7px) !important;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6) !important;
+  margin-top: -5rem;
+  height: 5rem;
+}
+a {
+  color: #ffffff !important ;
+  text-decoration: none;
+  padding: 0 20px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: 0.1s;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: aqua;
+  transition: 0.2s linear;
+}
+a:hover {
+  color: #fff;
+}
+a:hover:after {
+  width: 100%;
+}
+.navlogo_class{
+        /* width:85%;  */
+        height: 70px !important; 
+        object-fit: contain;
+        border-radius: 50%;
+}
+.divoflogo_class{
+    height: 100%; 
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divofabout_class{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+}
+.divofbrand_class{
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+@media only screen and (max-width: 1300px) {
+  .divofbrand_class{
+    width: 80%;
+    justify-content: start;
+  }
+}
+.divofmenu_class{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  justify-content:end;
+}
+.brandname_class{
+  font-size: xx-large;
+  color:white;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Merriweather", serif;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.options_class{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.threeline_class{
+    filter: invert(100%);
+    width: 2.5rem;
+}
+.ownername_class{
+  color: white;
+  font-size: small;
+}
+.header_div_class{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.username{
+    color:white !important;
+    font-size: x-large;
+}
+#user{
+    width: 3rem;
+    margin-left: 1rem;
+}

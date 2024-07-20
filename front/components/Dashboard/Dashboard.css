@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    /* height: 100vh;
+    width: 100vw; */
+    background-color: #5def84;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  font-weight: 300;
+  font-style: normal;
+  color: #107b66;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas: 
+        "symptoms-list blood-pressure blood-pressure weight"
+        "symptoms-list blood-pressure blood-pressure weight"
+        "symptoms-list temperature temperature height"
+        "userdata temperature temperature height"
+        "userdata sleep-time sleep-time sleep-time"
+        "userdata sleep-time sleep-time sleep-time";
+    gap: 10px;
+    height: 89vh;
+    background: #ffffffb2;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 1.5vh;
+    margin-top: 5rem;
+}
+.userdata {
+    grid-area: userdata;
+    font-size: 2.5rem;
+    font-weight: 400;
+    transition: transform 0.3s ease, scale 0.3s ease; /* Add scale transition */
+    border: 1px solid black;
+}
+
+.dashboard > div {
+     /* padding: 20px; */
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background: #fafafa;
+    text-align: center;
+    overflow: auto;
+}
+
+
+.profile-box {
+    background-color: #00000021;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Arial, sans-serif;
+    /* padding: 10px; */
+    border-radius: 5px;
+    width: 100%; 
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.profile-image {
+    width: 70px; /* Adjust size of the circular image */
+    height: 70px;
+    border-radius: 50%; /* Makes the image circular */
+    /* margin-right: 10px; */
+}
+
+.user-name {
+    font-size: 22px; /* Adjust font size */
+    font-weight: bold;
+}
+
+/* symptoms css  */
+.symptoms-list {
+    grid-area: symptoms-list;
+    font-size: 2.5rem;
+    font-weight: 400;
+    transition: transform 0.3s ease, scale 0.3s ease; /* Add scale transition */
+    border: 1px solid black
+
+}
+.symptoms-list:hover {
+    transform: translateY(-3px) scale(0.97); /* Moves the box 10px up and scales it to 1.1 times */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+}
+.points-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px; /* Adjust width as needed */
+    
+}
+
+.points-list {
+    padding: 0;
+    font-size: large;
+    margin-bottom: 0;
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.point-item {
+    margin-bottom: 5px;
+    margin-left: 0.2rem;
+    font-weight: 100;
+}
+
+
+/* blood pressor css  */
+.blood-pressure {
+    grid-area: blood-pressure;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 2.5rem;
+    transition: transform 0.3s ease, scale 0.3s ease; /* Add scale transition */
+    border: 1px solid black;
+}
+.blood-pressure:hover {
+    transform: translateY(3px) scale(0.97); /* Moves the box 10px up and scales it to 1.1 times */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+}
+.counter-container {
+    margin-top: 2rem;
+    width: 100px; /* Adjust container width */
+    height: 100px; /* Adjust container height */
+    position: relative;
+  }
+  
+  .counter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff; /* Text color */
+    border: 1px solid black;
+  }
+  
+ li{
+    list-style: none;
+    font-size: 2rem;
+ } 
+
+/* bmi css  */
+.temperature {
+    grid-area: temperature;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 2.5rem;
+    transition: transform 0.3s ease, scale 0.3s ease; /* Add scale transition */
+    border: 1px solid black;
+}
+.temperature:hover {
+    transform: translateY(3px) scale(0.97); /* Moves the box 10px up and scales it to 1.1 times */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* bodytemp css      */
+.weight {
+    grid-area: weight;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 2.5rem;
+    transition: transform 0.3s ease, scale 0.3s ease; /* Add scale transition */
+    border: 1px solid black;
+}
+.weight:hover {
+    transform: translateY(-3px) scale(0.97); /* Moves the box 10px up and scales it to 1.1 times */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+}
+.height {
+    grid-area: height;
+    font-size: larger;
+    font-weight: 400;
+    font-size: 2.5rem;
+    transition: transform 0.3s ease, scale 0.3s ease; /* Add scale transition */
+    border: 1px solid black;
+}
+.height:hover {
+    transform: translateY(-3px) scale(0.97); /* Moves the box 10px up and scales it to 1.1 times */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* sleep time css  */
+.sleep-time {
+    grid-area: sleep-time;
+    font-size: larger;
+    font-weight: 400;
+    font-size: 2.5rem;
+    transition: transform 0.3s ease, scale 0.3s ease; /* Add scale transition */
+    border: 1px solid black;
+}
+.sleep-time:hover {
+    transform: translateY(-3px) scale(0.97); /* Moves the box 10px up and scales it to 1.1 times */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+}
+.userdata:hover {
+    transform: translateY(-3px) scale(0.97); /* Moves the box 10px up and scales it to 1.1 times */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+}
+
+.divsleeptime{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+}
+.timetosleep{
+    font-size: 5rem;
+  font-weight:lighter;
+  font-style: normal;
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+}
+
+.diet {
+    grid-area: diet;
+    font-size: larger;
+    font-weight: 400;
+    font-size: 2.5rem;
+    transition: transform 0.3s ease, scale 0.3s ease; /* Add scale transition */
+    border: 1px solid black;
+}
+.diet:hover {
+    transform: translateY(-3px) scale(0.97); /* Moves the box 10px up and scales it to 1.1 times */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+}
+
+#chatbot-container{
+    width: 0;
+    height: 0;
+    position: absolute;
+    display: none;
+}
+.checkbox{
+    position: relative; 
+    bottom: 2px;
+    right: 3px;
+}
+.userstatus{
+    font-size:large;
+    color:#107b66;
+}
+.infouser{
+ font-size: large;   
+}
