@@ -35,4 +35,4 @@ To set up and run the project locally, follow these steps:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/healing-helper-webapp.git
+git clone https://github.com/gautam-babariya/Healing-helper.git
