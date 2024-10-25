@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const Userdata = require('./model/Userdata');
+require('dotenv').config();
+
 
 app.use(cors())
   app.use((req, res, next) => {
@@ -19,7 +21,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // mongo connection..........................
 const connect = async () => {
     try {
-        const database = await mongoose.connect('mongodb+srv://sastaolx123:Vg9mi8oQk3rwIkIC@mycluster.ska5aw9.mongodb.net/Heallinghelperdata')
+        const mongourl = process.env.VITE_MONGO_URL;
+        const database = await mongoose.connect(mongourl)
         console.log("mongo conneted!");
     } catch (error) {
         console.log("error mongo" + error);
